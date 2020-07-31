@@ -1,6 +1,6 @@
 # MagnetPi
 
-We'll be integrating a standard USB webcam and a magnetic sensor, with the help of a Raspberry Pi, in order to capture frames for tablet disintegration analysis.
+We'll be integrating a standard USB webcam and a magnetic sensor, with the help of a Raspberry Pi, in order to capture frames that have been processed for vertical stability.
 
 Here's what we'll need:
 - Raspberry Pi 3
@@ -21,20 +21,20 @@ Follow this [tutorial](https://pimylifeup.com/raspberry-pi-opencv/).
 Reach out to me if you have any difficulties.
 
 ## Power up the servo
-Connect three wires from the output side (signal/+/-) of your servo tester to the servo on your disintegration unit. Connect two (+/-) wires from the input side of the servo tester to pins 2(+) and 6(-) of the Raspberry Pi GPIO (general-purpose input/output) pins. After making sure the Raspberry Pi is on, ensure the servo tester lights up and can generate movement in the disintegration unit.
+Connect three wires from the output side (signal/+/-) of your servo tester to the servo on your unit. Connect two (+/-) wires from the input side of the servo tester to pins 2(+) and 6(-) of the Raspberry Pi GPIO (general-purpose input/output) pins. After making sure the Raspberry Pi is on, ensure the servo tester lights up and can generate movement in the unit.
 
 ![alt text](https://github.com/kasey-mcfadden/MagnetPi/blob/master/images/GPIO.jpeg "GPIO")
 
 ## Bring the magnets in
-Using wires, connect your magnetic sensor to pins 14(-) and 16(+) on the Raspberry Pi GPIO. Mount the sensor (the one with wires) to the wall of the disintegration unit at the highest point in its vertical motion. Mount the magnet (the one without wires) to the white bar which raises and lowers the test tubes. The goal is for the sensor and magnet to overlap at the top of the vertical motion, creating contact and triggering the camera to take a snapshot.
+Using wires, connect your magnetic sensor to pins 14(-) and 16(+) on the Raspberry Pi GPIO. Mount the sensor (the one with wires) to the wall of the unit at the highest point in its vertical motion. Mount the magnet (the one without wires) to the white bar which raises and lowers the test tubes. The goal is for the sensor and magnet to overlap at the top of the vertical motion, creating contact and triggering the camera to take a snapshot.
 
 ## Set up the webcam
-Use the hinge on the webcam to place it over the top of the disintegration unit, angled down and into the chamber for a clear picture of the disintegration process. Plug the webcam into a USB port on the Raspberry Pi.
+Use the hinge on the webcam to place it over the top of the unit, angled down and into the chamber for a clear picture of the process. Plug the webcam into a USB port on the Raspberry Pi.
 
 ![alt text](https://github.com/kasey-mcfadden/MagnetPi/blob/master/images/setup.jpeg "setup")
 
 ## Fire it up
-Open `vid.py` on the Raspberry Pi. It should open in Thonny, a Python IDE for the Raspberry Pi. From here you can run the code, generating videos for disintegration analysis. A few customizable fields:
+Open `vid.py` on the Raspberry Pi. It should open in Thonny, a Python IDE for the Raspberry Pi. From here you can run the code, generating videos for analysis. A few customizable fields:
 
 ```
 MAGNET = 16               # pin number on raspberry pi GPIO
