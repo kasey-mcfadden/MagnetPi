@@ -33,8 +33,9 @@ Use the hinge on the webcam to place it over the top of the disintegration unit,
 Open `vid.py` on the Raspberry Pi. It should open in Thonny, a Python IDE for the Raspberry Pi. From here you can run the code, generating videos for disintegration analysis. A few customizable fields:
 
 ```
-pathOut = 'video.mp4'
-fps = 0.5
+MAGNET = 16               # pin number on raspberry pi GPIO
+pathOut = 'video.mp4'     # output file name for video
+fps = 2.0                 # frames per second to write to video
+size = (1920,1080)        # dimensions of video
+time_limit = 60           # time limit, in seconds
 ```
-
-Change `pathOut` (output file name) and `fps` (frames per second to write to the video) as needed.
