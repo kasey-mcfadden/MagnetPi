@@ -39,3 +39,5 @@ fps = 2.0                 # frames per second to write to video
 size = (1920,1080)        # dimensions of video
 time_limit = 60           # time limit, in seconds
 ```
+
+Edit these values as needed in `vid.py`.
